@@ -36,8 +36,6 @@ which provide good security and usability (Wiefling et al., 2021). Our
 OpenStack plugins aim to close this gap. This also allows websites with
 small budget to protect their users with RBA.
 
-
-
 ## Conception
 
 The RBA OpenStack plugin consists of two components which integrate the
@@ -65,9 +63,9 @@ authentication factors can be configured in the plugin.
 [Horizon]: https://docs.openstack.org/horizon/latest/
 [keystoneauth]: https://docs.openstack.org/keystoneauth/latest/
 
-
 ## Installation
-Most of the installations can be done beside already existing Keystone and Horizon installations. 
+
+Most of the installations can be done beside already existing Keystone and Horizon installations.
 
 Only the Keystoneauth library will need the replacement with the [Keystoneauth fork](https://github.com/das-group/keystoneauth) containing the RBA method. Clone the Keystoneauth fork and install it with the `pip` package manager:
 
@@ -81,9 +79,9 @@ Then clone the [keystone_rba_plugin](https://github.com/das-group/keystone-rba-p
 The RBA implementation is based on scientific results of the following
 publications:
 
-Stephan Wiefling, Paul René Jørgensen, Sigurd Thunem, and Luigi Lo 
-Iacono. Pump Up Password Security! Evaluating and Enhancing Risk-Based 
-Authentication on a Real-World Large-Scale Online Service. In: ACM TOPS. 
+Stephan Wiefling, Paul René Jørgensen, Sigurd Thunem, and Luigi Lo
+Iacono. Pump Up Password Security! Evaluating and Enhancing Risk-Based
+Authentication on a Real-World Large-Scale Online Service. In: ACM TOPS.
 2022. [doi: 10.1145/3546069](https://doi.org/10.1145/3546069)
 
 Stephan Wiefling, Markus Dürmuth, and Luigi Lo Iacono. What’s in Score
@@ -116,7 +114,34 @@ Giorgio Giacinto. Who Are You? A Statistical Approach to Measuring User
 Authenticity. In: NDSS '16. 2016.
 [doi:10.14722/ndss.2016.23240](https://doi.org/10.14722/ndss.2016.23240).
 
+## Technical Paper
 
+We provide more information on how to integrate the software, and the pitfalls
+that we discovered when working on putting RBA algorithms into software projects
+in the following publication:
+
+[Risk-Based Authentication for OpenStack: A Fully Functional Implementation and Guiding Example] (2023)<br>
+_Vincent Unsel, Stephan Wiefling, Nils Gruschka, and Luigi Lo Iacono_.<br>
+_13th ACM Conference on Data and Application Security and Privacy (CODASPY '23), Charlotte, NC, USA_.
+
+[Risk-Based Authentication for OpenStack: A Fully Functional Implementation and Guiding Example]: https://nbn-resolving.org/urn:nbn:de:hbz:1044-opus-66425
+
+#### Bibtex
+
+~~~.bibtex
+@inproceedings{Unsel_Risk_2023,
+  title = {{Risk-Based Authentication for OpenStack: A Fully Functional Implementation and Guiding Example}},
+  author = {Unsel, Vincent and Wiefling, Stephan and Gruschka, Nils and Lo Iacono, Luigi},
+  booktitle = {{13th ACM Conference on Data and Application Security and Privacy}},
+  year = {2023},
+  series = {{CODASPY} '23},
+  location = {Charlotte, NC, USA},
+  publisher = {ACM},
+  doi = {10.1145/3577923.35836},
+  month = apr,
+  year = {2023}
+}
+~~~
 
 ## Contact
 
@@ -125,7 +150,6 @@ to integrate such a RBA solution into your own online service, feel free
 to contact us for support or consulting.
 
 E-Mail: das@h-brs.de
-
 
 ## License
 
